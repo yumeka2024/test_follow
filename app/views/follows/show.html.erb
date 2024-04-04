@@ -1,0 +1,23 @@
+<h1>Follows#show</h1>
+<p>Find me in app/views/follows/show.html.erb</p>
+
+<h2>
+  <%= @user.email %>
+</h2>
+
+<%# フォロー一覧表示 %>
+<h3>Follows --></h3>
+<% @follows.each do |follower| %>
+  <div>
+    <%= follower.user.email %>
+  </div>
+<% end %>
+
+
+<%# フォローワー一覧表示 %>
+<h3>Followers --></h3>
+<% @followers.each do |follower| %>
+  <div>
+    <%= follower.user.email %>
+  </div>
+<% end %>
